@@ -15,13 +15,13 @@ export default function MonacoDetailingSite() {
   const services = {
     autos: [
       { name: "Interior (Hatch / Sedan)", desc: "Aspirado profundo, descontaminación del habitáculo y reacondicionamiento de plásticos.", price: 150000, time: "1 día" },
-      { name: "Interior al Detalle (Hatch / Sedan)", desc: "Desarme, aspirado profundo, limpieza de techo y tapizados, descontaminación y reacondicionamiento de plásticos.", price: 250000, time: "1 día" },
+      { name: "Interior al Detalle (Hatch / Sedan)", desc: "Desarme, aspirado profundo, limpieza de techo y tapizados, descontaminación y reacondicionamiento de plásticos.", price: 250000, time: "2–3 días" },
       { name: "Motor a Vapor (Hatch / Sedan)", desc: "Limpieza técnica del vano motor a vapor.", price: 100000, time: "En el día" },
       { name: "Paquete Completo (Hatch / Sedan)", desc: "Abrillantado + Interior + Motor a Vapor.", price: 350000, time: "2–3 días" }
     ],
     suv: [
       { name: "Interior (SUV / Pick-Up)", desc: "Aspirado profundo, descontaminación del habitáculo y reacondicionamiento de plásticos.", price: 200000, time: "1 día" },
-      { name: "Interior al Detalle (SUV / Pick-Up)", desc: "Desarme, aspirado profundo, limpieza de techo y tapizados, descontaminación y reacondicionamiento de plásticos.", price: 300000, time: "1 día" },
+      { name: "Interior al Detalle (SUV / Pick-Up)", desc: "Desarme, aspirado profundo, limpieza de techo y tapizados, descontaminación y reacondicionamiento de plásticos.", price: 300000, time: "2–3 días" },
       { name: "Motor a Vapor (SUV / Pick-Up)", desc: "Limpieza técnica del vano motor a vapor.", price: 130000, time: "En el día" },
       { name: "Paquete Completo SUV / Pick-Up", desc: "Abrillantado + Interior + Motor a Vapor.", price: 450000, time: "2–3 días" }
     ],
