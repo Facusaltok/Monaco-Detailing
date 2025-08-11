@@ -115,7 +115,7 @@ export default function MonacoDetailingSite() {
           <h1 style={{ fontSize: 36, lineHeight: 1.2, fontWeight: 800 }}>
             Detailing premium <span style={{ color: ui.green }}>Monaco Detailing</span>
           </h1>
-          <p style={{ color: ui.mut, marginTop: 12, maxWidth: 680 }}>
+          <p style={{color:'#94a3b8', marginTop:4}}>build: {new Date().toLocaleString()}</p>
             Especialistas en estética vehicular: interior profundo, abrillantado, motor a vapor y tratamientos de protección.
           </p>
           <div style={{ display: 'flex', gap: 12, marginTop: 16, flexWrap: 'wrap' }}>
