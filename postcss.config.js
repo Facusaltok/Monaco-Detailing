@@ -1,2 +1,2 @@
-// opción ESM
+// SIN Tailwind
 export default { plugins: {} }
