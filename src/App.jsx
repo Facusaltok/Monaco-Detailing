@@ -154,7 +154,7 @@ export default function MonacoDetailingSite() {
               Monaco Detailing
             </h1>
             <h2 style={{ fontSize:28, lineHeight:1.2, fontWeight:700, color: ui.green, marginTop:6 }}>
-              Detailing premium
+              
             </h2>
 
             <p style={{ color: ui.mut, marginTop:12, maxWidth:720, marginInline:'auto' }}>
