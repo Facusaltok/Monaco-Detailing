@@ -55,6 +55,13 @@ export default function MonacoDetailingSite() {
     }
   ];
 
+  // NUEVO: Videos de YouTube (Shorts)
+  const videos = [
+    'hmG6tQvjoa0',
+    'wWcvlO_A0Ew',
+    'bqqJszdkWN0'
+  ];
+
   // Helpers
   function wamsg(txt) {
     const u = `https://wa.me/${phone}?text=${encodeURIComponent(txt)}`;
@@ -123,7 +130,7 @@ export default function MonacoDetailingSite() {
                          background:'rgba(10,10,10,.35)', borderBottom:`1px solid ${ui.border}`, zIndex:50 }}>
           <div style={{ ...wrap, padding:'12px 16px', display:'flex', justifyContent:'space-between', alignItems:'center' }}>
             <div style={{ display:'flex', alignItems:'center', gap:12 }}>
-              {/* LOGO: usa /logo.png.png en public/ */}
+              {/* LOGO desde /public/logo.png.png */}
               <img
                 src="/logo.png.png"
                 alt="Monaco Detailing"
@@ -134,11 +141,8 @@ export default function MonacoDetailingSite() {
             <nav style={{ display:'flex', gap:16, fontSize:14, color: ui.mut }}>
               <a href="#servicios" style={{ color:'inherit', textDecoration:'none' }}>Servicios</a>
               <a href="#tratamientos" style={{ color:'inherit', textDecoration:'none' }}>Tratamientos</a>
+              <a href="#videos" style={{ color:'inherit', textDecoration:'none' }}>Videos</a>
               <a href="#contacto" style={{ color:'inherit', textDecoration:'none' }}>Contacto</a>
-              <button onClick={() => wamsg("Hola Monaco Detailing, me gustaría agendar un turno.")}
-                      style={{ border:'none', borderRadius:12, padding:'8px 12px', background:ui.green, color:'#0b0f10', fontWeight:700, cursor:'pointer' }}>
-                Agendar ahora
-              </button>
             </nav>
           </div>
         </header>
@@ -236,46 +240,38 @@ export default function MonacoDetailingSite() {
           </div>
         </section>
 
-        // Videos de YouTube (Shorts)
-const videos = [
-  'hmG6tQvjoa0',
-  'wWcvlO_A0Ew',
-  'bqqJszdkWN0'
-];
-<a href="#videos" style={{ color:'inherit', textDecoration:'none' }}>Videos</a>
-{/* Videos (YouTube Shorts) */}
-<section id="videos">
-  <div style={{ ...wrap, padding:'40px 16px' }}>
-    <h2 style={{ fontSize:24, fontWeight:700 }}>Videos</h2>
-    <p style={{ color: ui.mut, marginTop:6 }}>Algunos trabajos y resultados recientes.</p>
+        {/* NUEVO: Videos (YouTube Shorts) */}
+        <section id="videos">
+          <div style={{ ...wrap, padding:'40px 16px' }}>
+            <h2 style={{ fontSize:24, fontWeight:700 }}>Videos</h2>
+            <p style={{ color: ui.mut, marginTop:6 }}>Algunos trabajos y resultados recientes.</p>
 
-    <div style={{ display:'grid', gap:16, gridTemplateColumns:'repeat(auto-fit,minmax(260px,1fr))', marginTop:16 }}>
-      {videos.map((id) => (
-        <div key={id} style={{
-          border:`1px solid ${ui.border}`,
-          borderRadius:16,
-          overflow:'hidden',
-          background:'rgba(0,0,0,.25)',
-          display:'grid',
-          placeItems:'center'
-        }}>
-          <div style={{ width:'100%', aspectRatio:'9 / 16' }}>
-            <iframe
-              src={`https://www.youtube.com/embed/${id}`}
-              title={`YouTube video ${id}`}
-              style={{ width:'100%', height:'100%', border:0, display:'block' }}
-              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-              allowFullScreen
-              loading="lazy"
-              referrerPolicy="strict-origin-when-cross-origin"
-            />
+            <div style={{ display:'grid', gap:16, gridTemplateColumns:'repeat(auto-fit,minmax(260px,1fr))', marginTop:16 }}>
+              {videos.map((id) => (
+                <div key={id} style={{
+                  border:`1px solid ${ui.border}`,
+                  borderRadius:16,
+                  overflow:'hidden',
+                  background:'rgba(0,0,0,.25)',
+                  display:'grid',
+                  placeItems:'center'
+                }}>
+                  <div style={{ width:'100%', aspectRatio:'9 / 16' }}>
+                    <iframe
+                      src={`https://www.youtube.com/embed/${id}`}
+                      title={`YouTube video ${id}`}
+                      style={{ width:'100%', height:'100%', border:0, display:'block' }}
+                      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                      allowFullScreen
+                      loading="lazy"
+                      referrerPolicy="strict-origin-when-cross-origin"
+                    />
+                  </div>
+                </div>
+              ))}
+            </div>
           </div>
-        </div>
-      ))}
-    </div>
-  </div>
-</section>
-
+        </section>
 
         {/* Contacto + Ubicación */}
         <section id="contacto">
