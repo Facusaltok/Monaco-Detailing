@@ -51,7 +51,6 @@ export default function MonacoDetailingSite() {
     }
   ];
 
-  // NUEVO: Videos YouTube Shorts
   const videos = [
     'hmG6tQvjoa0',
     'wWcvlO_A0Ew',
@@ -118,10 +117,11 @@ export default function MonacoDetailingSite() {
               <strong>MONACO DETAILING</strong>
             </div>
             <nav style={{ display:'flex', gap:16, fontSize:14, color: ui.mut }}>
-              <a href="#servicios" style={{ color:'inherit', textDecoration:'none' }}>Servicios</a>
-              <a href="#tratamientos" style={{ color:'inherit', textDecoration:'none' }}>Tratamientos</a>
-              <a href="#videos" style={{ color:'inherit', textDecoration:'none' }}>Videos</a>
-              <a href="#contacto" style={{ color:'inherit', textDecoration:'none' }}>Contacto</a>
+              <a href="#servicios">Servicios</a>
+              <a href="#tratamientos">Tratamientos</a>
+              <a href="#videos">Videos</a>
+              <a href="#contacto">Contacto</a>
+              <a href="#ubicacion">Ubicación</a>
             </nav>
           </div>
         </header>
@@ -187,7 +187,7 @@ export default function MonacoDetailingSite() {
           </div>
         </section>
 
-        {/* NUEVO: Videos */}
+        {/* Videos */}
         <section id="videos">
           <div style={{ ...wrap, padding:'40px 16px' }}>
             <h2>Videos</h2>
@@ -216,9 +216,26 @@ export default function MonacoDetailingSite() {
         <section id="contacto">
           <div style={{ ...wrap, padding:'40px 16px' }}>
             <h2>Contacto</h2>
+            <p>Para consultas y reservas:</p>
             <button onClick={() => wamsg("Hola Monaco Detailing, me gustaría agendar un turno.")} style={{ borderRadius:12, padding:'12px 16px', background: ui.green, color:'#0b0f10', fontWeight:700 }}>
               WhatsApp directo
             </button>
+          </div>
+        </section>
+
+        {/* Ubicación */}
+        <section id="ubicacion">
+          <div style={{ ...wrap, padding:'40px 16px' }}>
+            <h2>Ubicación</h2>
+            <iframe
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3283.735103213502!2d-58.38159338477079!3d-34.60368458045924!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95a3349a3f7e9d6b%3A0x1b7a82c07e8b47e4!2sBuenos%20Aires%2C%20Argentina!5e0!3m2!1ses!2sar!4v1699999999999"
+              width="100%"
+              height="300"
+              style={{ border: 0 }}
+              allowFullScreen=""
+              loading="lazy"
+              title="Mapa ubicación"
+            ></iframe>
           </div>
         </section>
 
