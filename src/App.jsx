@@ -136,7 +136,7 @@ export default function MonacoDetailingSite() {
   style={{ height: 40, width: 'auto', borderRadius: 6 }}
 />
 
-              <strong>MONACO DETAILING</strong>
+              
             </div>
             <nav style={{ display:'flex', gap:16, fontSize:14, color: ui.mut }}>
               <a href="#servicios" style={{ color:'inherit', textDecoration:'none' }}>Servicios</a>
