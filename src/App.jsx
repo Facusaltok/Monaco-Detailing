@@ -236,6 +236,47 @@ export default function MonacoDetailingSite() {
           </div>
         </section>
 
+        // Videos de YouTube (Shorts)
+const videos = [
+  'hmG6tQvjoa0',
+  'wWcvlO_A0Ew',
+  'bqqJszdkWN0'
+];
+<a href="#videos" style={{ color:'inherit', textDecoration:'none' }}>Videos</a>
+{/* Videos (YouTube Shorts) */}
+<section id="videos">
+  <div style={{ ...wrap, padding:'40px 16px' }}>
+    <h2 style={{ fontSize:24, fontWeight:700 }}>Videos</h2>
+    <p style={{ color: ui.mut, marginTop:6 }}>Algunos trabajos y resultados recientes.</p>
+
+    <div style={{ display:'grid', gap:16, gridTemplateColumns:'repeat(auto-fit,minmax(260px,1fr))', marginTop:16 }}>
+      {videos.map((id) => (
+        <div key={id} style={{
+          border:`1px solid ${ui.border}`,
+          borderRadius:16,
+          overflow:'hidden',
+          background:'rgba(0,0,0,.25)',
+          display:'grid',
+          placeItems:'center'
+        }}>
+          <div style={{ width:'100%', aspectRatio:'9 / 16' }}>
+            <iframe
+              src={`https://www.youtube.com/embed/${id}`}
+              title={`YouTube video ${id}`}
+              style={{ width:'100%', height:'100%', border:0, display:'block' }}
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+              allowFullScreen
+              loading="lazy"
+              referrerPolicy="strict-origin-when-cross-origin"
+            />
+          </div>
+        </div>
+      ))}
+    </div>
+  </div>
+</section>
+
+
         {/* Contacto + Ubicación */}
         <section id="contacto">
           <div style={{ ...wrap, padding:'40px 16px', display:'grid', gap:24 }}>
