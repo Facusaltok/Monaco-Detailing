@@ -20,13 +20,13 @@ export default function MonacoDetailingSite() {
   const services = {
     autos: [
       { name: "Interior (Hatch / Sedan)", desc: "Aspirado profundo, descontaminación del habitáculo y reacondicionamiento de plásticos.", price: 150000, time: "1 día" },
-      { name: "Interior al Detalle (Hatch / Sedan)", desc: "Desarme, aspirado profundo, limpieza de techo y tapizados, descontaminación y reacondicionamiento de plásticos.", price: 250000, time: "2-3 días" },
+      { name: "Interior al Detalle (Hatch / Sedan)", desc: "Desarme, aspirado profundo, limpieza de techo y tapizados, descontaminación y reacondicionamiento de plásticos.", price: 250000, time: "1 día" },
       { name: "Motor a Vapor (Hatch / Sedan)", desc: "Limpieza técnica del vano motor a vapor.", price: 100000, time: "En el día" },
       { name: "Paquete Completo (Hatch / Sedan)", desc: "Abrillantado + Interior + Motor a Vapor.", price: 350000, time: "2–3 días" }
     ],
     suv: [
       { name: "Interior (SUV / Pick-Up)", desc: "Aspirado profundo, descontaminación del habitáculo y reacondicionamiento de plásticos.", price: 200000, time: "1 día" },
-      { name: "Interior al Detalle (SUV / Pick-Up)", desc: "Desarme, aspirado profundo, limpieza de techo y tapizados, descontaminación y reacondicionamiento de plásticos.", price: 300000, time: "2-3 días" },
+      { name: "Interior al Detalle (SUV / Pick-Up)", desc: "Desarme, aspirado profundo, limpieza de techo y tapizados, descontaminación y reacondicionamiento de plásticos.", price: 300000, time: "1 día" },
       { name: "Motor a Vapor (SUV / Pick-Up)", desc: "Limpieza técnica del vano motor a vapor.", price: 130000, time: "En el día" },
       { name: "Paquete Completo SUV / Pick-Up", desc: "Abrillantado + Interior + Motor a Vapor.", price: 450000, time: "2–3 días" }
     ],
@@ -123,7 +123,12 @@ export default function MonacoDetailingSite() {
                          background:'rgba(10,10,10,.35)', borderBottom:`1px solid ${ui.border}`, zIndex:50 }}>
           <div style={{ ...wrap, padding:'12px 16px', display:'flex', justifyContent:'space-between', alignItems:'center' }}>
             <div style={{ display:'flex', alignItems:'center', gap:12 }}>
-              <div style={{ width:36, height:36, borderRadius:10, background: ui.green, boxShadow:'0 0 18px rgba(10,141,75,.35)' }} />
+              {/* LOGO: usa /logo.png.png en public/ */}
+              <img
+                src="/logo.png.png"
+                alt="Monaco Detailing"
+                style={{ height: 40, width: 'auto', borderRadius: 6 }}
+              />
               <strong>MONACO DETAILING</strong>
             </div>
             <nav style={{ display:'flex', gap:16, fontSize:14, color: ui.mut }}>
@@ -231,7 +236,7 @@ export default function MonacoDetailingSite() {
           </div>
         </section>
 
-        {/* Contacto + Ubicación (selector con TODOS los servicios + tratamientos, sin comentarios) */}
+        {/* Contacto + Ubicación */}
         <section id="contacto">
           <div style={{ ...wrap, padding:'40px 16px', display:'grid', gap:24 }}>
             {/* Contacto */}
@@ -291,7 +296,6 @@ export default function MonacoDetailingSite() {
                     </optgroup>
                   </select>
 
-                  {/* Comentarios eliminado a pedido */}
                   <button style={{ border:'none', borderRadius:12, padding:'12px 16px', background: ui.green, color:'#0b0f10', fontWeight:700, cursor:'pointer' }}>
                     Confirmar reserva
                   </button>
