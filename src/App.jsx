@@ -130,7 +130,6 @@ export default function MonacoDetailingSite() {
                          background:'rgba(10,10,10,.35)', borderBottom:`1px solid ${ui.border}`, zIndex:50 }}>
           <div style={{ ...wrap, padding:'12px 16px', display:'flex', justifyContent:'space-between', alignItems:'center' }}>
             <div style={{ display:'flex', alignItems:'center', gap:12 }}>
-              {/* LOGO desde /public/logo.png */}
               <img
                 src="/logo.png.png"
                 alt="Monaco Detailing"
