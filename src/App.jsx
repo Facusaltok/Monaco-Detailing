@@ -131,7 +131,7 @@ export default function MonacoDetailingSite() {
           <div style={{ ...wrap, padding:'12px 16px', display:'flex', justifyContent:'space-between', alignItems:'center' }}>
             <div style={{ display:'flex', alignItems:'center', gap:12 }}>
              <img
-  src="https://i.postimg.cc/yDV57DYt/logo.png"
+  src="file:///C:/Users/seguridad/Downloads/monaco-logo.webp"
   alt="Monaco Detailing"
   style={{ height: 40, width: 'auto', borderRadius: 6 }}
 />
